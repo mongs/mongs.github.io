@@ -1122,7 +1122,7 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: normal;
   font-family: 'Fira Code', '黑体', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1888,7 +1888,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #597f3c;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;

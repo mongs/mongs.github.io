@@ -412,72 +412,39 @@
       
         
           
-            <h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><ul>
-<li>break</li>
-<li>default</li>
-<li>func</li>
-<li>interface</li>
-<li>select</li>
-<li>case</li>
-<li>defer</li>
-<li>go</li>
-<li>map</li>
-<li>struct</li>
-<li>chan</li>
-<li>else</li>
-<li>goto</li>
-<li>package</li>
-<li>switch</li>
-<li>const</li>
-<li>fallthrough</li>
-<li>if</li>
-<li>range</li>
-<li>type</li>
-<li>continue</li>
-<li>for</li>
-<li>import</li>
-<li>return</li>
-<li>var</li>
-</ul>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 单行注释</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">多行注释</span></div><div class="line"><span class="comment">*/</span></div></pre></td></tr></table></figure>
-<h3 id="Go程序的一般结构：basic-structure-go"><a href="#Go程序的一般结构：basic-structure-go" class="headerlink" title="Go程序的一般结构：basic_structure.go"></a>Go程序的一般结构：basic_structure.go</h3><ul>
-<li><p>Go程序是通过 package 来组织的（与python类似）</p>
-</li>
-<li><p>只有 package 名称为 main 的包可以包含 main 函数</p>
-</li>
-<li><p>一个可执行程序 有且仅有 一个 main 包</p>
-</li>
-<li><p>通过 import 关键字来导入其它非 main 包</p>
-</li>
-<li><p>通过 const 关键字来进行常量的定义</p>
-</li>
-<li><p>通过在函数体外部使用 var 关键字来进行全局变量的声明与赋值</p>
-</li>
-<li><p>通过 type 关键字来进行结构(struct)或接口(interface)的声明</p>
-</li>
-<li><p>通过 func 关键字来进行函数的声明</p>
-</li>
-</ul>
-<h4 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h4><h5 id="导入package"><a href="#导入package" class="headerlink" title="导入package"></a>导入package</h5><p>第一种方式，依次导入</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></div><div class="line"><span class="keyword">import</span> <span class="string">"os"</span></div><div class="line"><span class="keyword">import</span> <span class="string">"time"</span></div><div class="line"><span class="keyword">import</span> <span class="string">"strings"</span></div></pre></td></tr></table></figure>
-<p>第二种方式，简写方式导入</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> (</div><div class="line">  <span class="string">"fmt"</span></div><div class="line">  <span class="string">"io"</span></div><div class="line">  <span class="string">"time"</span></div><div class="line">  <span class="string">"strconv"</span></div><div class="line">)</div></pre></td></tr></table></figure>
-<p><strong>注意：</strong> 如果导入包之后 未调用 其中的函数或者类型将会报出编译错误<code>imported and not used: &quot;&lt;pkg&gt;&quot;</code></p>
-<h5 id="package别名"><a href="#package别名" class="headerlink" title="package别名"></a>package别名</h5><p>当使用第三方包时，包名可能会非常接近或者相同，此时就可以使用别名来进行区别和调用。如：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> (</div><div class="line">  f <span class="string">"fmt"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment">// 调用时</span></div><div class="line">f.Println(<span class="string">"hello world"</span>)</div></pre></td></tr></table></figure>
-<h5 id="省略调用"><a href="#省略调用" class="headerlink" title="省略调用"></a>省略调用</h5><p>不建议使用，易混淆；不可以和别名同时使用。代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> (</div><div class="line">  . <span class="string">"fmt"</span></div><div class="line">)</div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="comment">// 省略包名 调用</span></div><div class="line">  Println(<span class="string">"hello world"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="可见性规则"><a href="#可见性规则" class="headerlink" title="可见性规则"></a>可见性规则</h3><blockquote>
-<p>Go语言中，使用 大小写 来决定该 常量、变量、类型、接口、结构或函数 是否可以被外部包所调用</p>
-</blockquote>
-<ul>
-<li><p>首字母小写是私有private</p>
-</li>
-<li><p>首字母大写是共有public</p>
-</li>
-</ul>
-
-          
+          关键字
+break
+default
+func
+interface
+select
+case
+defer
+go
+map
+struct
+chan
+else
+goto
+package
+switch
+const
+fallthrough
+if
+range
+type
+continue
+for
+import
+ret
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/24/02_Go语言基础知识/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -628,58 +595,20 @@
       
         
           
-            <h3 id="什么是Go"><a href="#什么是Go" class="headerlink" title="什么是Go"></a>什么是Go</h3><p>Go是一门<strong>并发</strong>支持、<strong>垃圾回收</strong>的<strong>编译型</strong>系统编程语言，旨在创造一门具有静态编译语言的<strong>高性能</strong>和动态语言的<strong>高效开发</strong>之间拥有良好平衡点的一门编程语言。</p>
-<h3 id="Go的主要特点有那些？"><a href="#Go的主要特点有那些？" class="headerlink" title="Go的主要特点有那些？"></a>Go的主要特点有那些？</h3><ul>
-<li><strong>类型安全</strong> 和 <strong>内存安全</strong></li>
-<li>以非常直观和极低代价的方案实现<strong>高并发</strong></li>
-<li>高效的<strong>垃圾回收</strong>机制</li>
-<li><strong>快速编译</strong>（同时解决C语言中头文件太多的问题）</li>
-<li>为多核计算机提供<strong>性能提升</strong>的方案</li>
-<li>UTF-8编码支持</li>
-</ul>
-<h3 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h3><ul>
-<li>Youtube全球最大的视频网站</li>
-<li>七牛云存储以及旗下的网盘服务</li>
-<li>爱好者开发的Go论坛及博客</li>
-<li>谷歌、盛大、七牛、360等企业都在用</li>
-<li>海量开源项目：<a href="https://github.com/golang/go" target="_blank" rel="external">Go wiki</a>、<a href="https://gowalker.org/" target="_blank" rel="external">Go Walker</a>、<a href="http://go-lang.cat-v.org/library-bindings" target="_blank" rel="external">Go Language Resources</a></li>
-</ul>
-<h3 id="Go环境配置"><a href="#Go环境配置" class="headerlink" title="Go环境配置"></a>Go环境配置</h3><h4 id="Go安装"><a href="#Go安装" class="headerlink" title="Go安装"></a>Go安装</h4><p>到<a href="https://golang.org/" target="_blank" rel="external">golang</a>官网下载，如果不能翻墙可以到<a href="https://www.golangtc.com/download" target="_blank" rel="external">Golang中国</a>下载。</p>
-<h5 id="安装方式："><a href="#安装方式：" class="headerlink" title="安装方式："></a>安装方式：</h5><ul>
-<li>源码安装</li>
-<li>标准包安装</li>
-<li>第三方工具安装</li>
-</ul>
-<p>安装完成后，在cmd中输入<code>go version</code>，如果输出go版本号说明安装成功。也可以输入<code>go env</code>查看相关信息，输出结果如下图：</p>
-<p><img src="owrx35qte.bkt.clouddn.com/go_env.jpg" alt="go_env.jpg"></p>
-<h4 id="GOPATH与工作空间"><a href="#GOPATH与工作空间" class="headerlink" title="GOPATH与工作空间"></a>GOPATH与工作空间</h4><p>GOPATH是我们的工作目录，如<code>F:/Go</code>，在windows的环境变量中新增GOPATH一项，如下图：</p>
-<p><img src="owrx35qte.bkt.clouddn.com/GOPATH.jpg" alt="GOPATH.jpg"></p>
-<p>$GOPATH目录下约定有三个子目录：</p>
-<ul>
-<li><p>src</p>
-<p>存放源代码</p>
-</li>
-<li><p>pkg</p>
-<p>编译后生成的文件</p>
-</li>
-<li><p>bin</p>
-<p>编译后生成的可执行文件</p>
-</li>
-</ul>
-<h4 id="go-常用命令"><a href="#go-常用命令" class="headerlink" title="go 常用命令"></a>go 常用命令</h4><ul>
-<li>go get：获取远程包（需 提前安装 git或hg）</li>
-<li>go run：直接运行程序</li>
-<li>go build：测试编译，检查是否有编译错误</li>
-<li>go fmt：格式化源码（部分IDE在保存时自动调用）</li>
-<li>go install：编译包文件并编译整个程序</li>
-<li>go test：运行测试文件</li>
-<li>go doc：查看文档（<a href="https://github.com/astaxie/godoc" target="_blank" rel="external">CHM手册</a>）</li>
-</ul>
-<blockquote>
-<p>搭建本地Go官网，命令行输入<code>$ godoc -http=:6060</code></p>
-</blockquote>
-
-          
+          什么是GoGo是一门并发支持、垃圾回收的编译型系统编程语言，旨在创造一门具有静态编译语言的高性能和动态语言的高效开发之间拥有良好平衡点的一门编程语言。
+Go的主要特点有那些？
+类型安全 和 内存安全
+以非常直观和极低代价的方案实现高并发
+高效的垃圾回收机制
+快速编译（同时解决C语言中头文件太多的问题
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/24/01_Go语言简介及安装/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -830,17 +759,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/17/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
