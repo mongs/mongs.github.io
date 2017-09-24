@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jun Feng</title>
   
-  <subtitle>冯骏的博客</subtitle>
+  <subtitle>Weblcome to Jun Feng&#39;s blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mongs.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://mongs.github.io/</id>
   
   <author>
-    <name>冯骏</name>
+    <name>wally</name>
     
   </author>
   
