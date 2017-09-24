@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Jun Feng</title>
+  <title>这是一个懒人</title>
   
-  <subtitle>Weblcome to Jun Feng&#39;s blog</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mongs.github.io/"/>
