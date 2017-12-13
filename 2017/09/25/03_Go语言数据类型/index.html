@@ -92,7 +92,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="冯骏, 冯教授, wally, fengjun, web, sram, sram web" />
+  <meta name="keywords" content="Go语言基础," />
 
 
 
@@ -108,16 +108,18 @@
 
 
 
-<meta name="description" content="求知若渴，大智若愚。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="这是一个懒人">
-<meta property="og:url" content="http://mongs.github.io/categories/杂谈/index.html">
+<meta name="description" content="一、Go基本类型1. 布尔型：bool 长度：1字节 取值范围：true/false 注意：不可以用数字代表true或false  2. 整型：init/uint 根据运行平台可能为 32 或 64位  3. 8位整型：int8/uint8 长度：1字节 取值范围：-128~127/0~255  4. 字节型 byte（uint8别名）  5. 16位整型：int16/uint16 长度：2字节">
+<meta name="keywords" content="Go语言基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go语言笔记（三）- 数据类型">
+<meta property="og:url" content="http://mongs.github.io/2017/09/25/03_Go语言数据类型/index.html">
 <meta property="og:site_name" content="这是一个懒人">
-<meta property="og:description" content="求知若渴，大智若愚。">
+<meta property="og:description" content="一、Go基本类型1. 布尔型：bool 长度：1字节 取值范围：true/false 注意：不可以用数字代表true或false  2. 整型：init/uint 根据运行平台可能为 32 或 64位  3. 8位整型：int8/uint8 长度：1字节 取值范围：-128~127/0~255  4. 字节型 byte（uint8别名）  5. 16位整型：int16/uint16 长度：2字节">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-25T07:40:56.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="这是一个懒人">
-<meta name="twitter:description" content="求知若渴，大智若愚。">
+<meta name="twitter:title" content="Go语言笔记（三）- 数据类型">
+<meta name="twitter:description" content="一、Go基本类型1. 布尔型：bool 长度：1字节 取值范围：true/false 注意：不可以用数字代表true或false  2. 整型：init/uint 根据运行平台可能为 32 或 64位  3. 8位整型：int8/uint8 长度：1字节 取值范围：-128~127/0~255  4. 字节型 byte（uint8别名）  5. 16位整型：int16/uint16 长度：2字节">
 
 
 
@@ -147,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://mongs.github.io/categories/杂谈/"/>
+  <link rel="canonical" href="http://mongs.github.io/2017/09/25/03_Go语言数据类型/"/>
 
 
 
 
 
-  <title>分类: 杂谈 | 这是一个懒人</title>
+  <title>Go语言笔记（三）- 数据类型 | 这是一个懒人</title>
   
 
 
@@ -172,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,55 +292,301 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>杂谈<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://mongs.github.io/2017/09/25/03_Go语言数据类型/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wally">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="这是一个懒人">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/17/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Go语言笔记（三）- 数据类型</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-17T21:51:14+08:00"
-              content="09-17-2017" >
-          09-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T11:21:48+08:00">
+                09-25-2017
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Go语言/" itemprop="url" rel="index">
+                    <span itemprop="name">Go语言</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/25/03_Go语言数据类型/" class="leancloud_visitors" data-flag-title="Go语言笔记（三）- 数据类型">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <h3 id="一、Go基本类型"><a href="#一、Go基本类型" class="headerlink" title="一、Go基本类型"></a>一、Go基本类型</h3><h4 id="1-布尔型：bool"><a href="#1-布尔型：bool" class="headerlink" title="1. 布尔型：bool"></a>1. 布尔型：bool</h4><ul>
+<li>长度：1字节</li>
+<li>取值范围：true/false</li>
+<li>注意：不可以用数字代表true或false</li>
+</ul>
+<h4 id="2-整型：init-uint"><a href="#2-整型：init-uint" class="headerlink" title="2. 整型：init/uint"></a>2. 整型：init/uint</h4><ul>
+<li>根据运行平台可能为 32 或 64位</li>
+</ul>
+<h4 id="3-8位整型：int8-uint8"><a href="#3-8位整型：int8-uint8" class="headerlink" title="3. 8位整型：int8/uint8"></a>3. 8位整型：int8/uint8</h4><ul>
+<li>长度：1字节</li>
+<li>取值范围：-128~127/0~255</li>
+</ul>
+<h4 id="4-字节型"><a href="#4-字节型" class="headerlink" title="4. 字节型"></a>4. 字节型</h4><ul>
+<li>byte（uint8别名）</li>
+</ul>
+<h4 id="5-16位整型：int16-uint16"><a href="#5-16位整型：int16-uint16" class="headerlink" title="5. 16位整型：int16/uint16"></a>5. 16位整型：int16/uint16</h4><ul>
+<li>长度：2字节</li>
+<li>取值范围：-32768~32767/0~65535</li>
+</ul>
+<h4 id="6-32位整型-int32-rune-uint32"><a href="#6-32位整型-int32-rune-uint32" class="headerlink" title="6. 32位整型: int32(rune)/uint32"></a>6. 32位整型: int32(rune)/uint32</h4><ul>
+<li>长度：4字节</li>
+<li>取值范围：-2^32/2~2^32/2-1/0~2^32-1</li>
+</ul>
+<h4 id="7-64位整型：int64-uint64"><a href="#7-64位整型：int64-uint64" class="headerlink" title="7. 64位整型：int64/uint64"></a>7. 64位整型：int64/uint64</h4><ul>
+<li>长度：8字节</li>
+<li>取值范围：-2^64/2~2^64/2-1/0~2^64-1</li>
+</ul>
+<h4 id="8-浮点型：float32-float64"><a href="#8-浮点型：float32-float64" class="headerlink" title="8. 浮点型：float32/float64"></a>8. 浮点型：float32/float64</h4><ul>
+<li>长度：4/8字节</li>
+<li>小数位：精确到7/15小数位</li>
+</ul>
+<h4 id="9-复数：complex64-complex128"><a href="#9-复数：complex64-complex128" class="headerlink" title="9. 复数：complex64/complex128"></a>9. 复数：complex64/complex128</h4><ul>
+<li>长度：8/16字节</li>
+</ul>
+<h4 id="10-足够保存指针的32位或64位整数型：uintptr"><a href="#10-足够保存指针的32位或64位整数型：uintptr" class="headerlink" title="10. 足够保存指针的32位或64位整数型：uintptr"></a>10. 足够保存指针的32位或64位整数型：uintptr</h4><h4 id="11-其他值类型："><a href="#11-其他值类型：" class="headerlink" title="11. 其他值类型："></a>11. 其他值类型：</h4><ul>
+<li>array：数组</li>
+<li>struct：结构</li>
+<li>string：字符串</li>
+</ul>
+<h4 id="12-引用类型"><a href="#12-引用类型" class="headerlink" title="12. 引用类型"></a>12. 引用类型</h4><ul>
+<li>slice：切片</li>
+<li>map：类似hash表</li>
+<li>chan：通道</li>
+</ul>
+<h4 id="13-接口类型：inteface"><a href="#13-接口类型：inteface" class="headerlink" title="13. 接口类型：inteface"></a>13. 接口类型：inteface</h4><h4 id="14-函数类型：func"><a href="#14-函数类型：func" class="headerlink" title="14. 函数类型：func"></a>14. 函数类型：func</h4><h3 id="类型零值"><a href="#类型零值" class="headerlink" title="类型零值"></a>类型零值</h3><p>零值并不等于空值，而是当变量被声明为某种类型后的默认值。通常情况下：</p>
+<ul>
+<li>值类型的默认值为0</li>
+<li>bool位false</li>
+<li>string为空字符串</li>
+</ul>
+<h3 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> (</span><br><span class="line">  <span class="keyword">byte</span> <span class="keyword">int8</span></span><br><span class="line">  <span class="keyword">rune</span> <span class="keyword">int32</span></span><br><span class="line">  文本 <span class="keyword">string</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// use</span></span><br><span class="line"><span class="keyword">var</span> b 文本</span><br><span class="line">b = <span class="string">"你好，Go语言"</span></span><br></pre></td></tr></table></figure>
+<h3 id="单个变量的声明与赋值"><a href="#单个变量的声明与赋值" class="headerlink" title="单个变量的声明与赋值"></a>单个变量的声明与赋值</h3><ul>
+<li>格式：</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var &lt;变量名&gt; &lt;变量类型&gt;</span></span><br><span class="line"><span class="keyword">var</span> a <span class="keyword">int</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>赋值格式：</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;变量名称&gt; = &lt;表达式&gt;</span></span><br><span class="line">a = <span class="number">17</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>同时赋值：</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var &lt;变量名&gt; [变量类型] = &lt;表达式&gt;</span></span><br><span class="line"><span class="keyword">var</span> a <span class="keyword">int</span> = <span class="number">17</span></span><br><span class="line"><span class="comment">// 可以省略显式类型，由系统推断</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">17</span></span><br><span class="line"><span class="comment">// 变量声明与赋值的简写方法</span></span><br><span class="line">c := <span class="number">17</span></span><br></pre></td></tr></table></figure>
+<h3 id="多个变量的声明与赋值"><a href="#多个变量的声明与赋值" class="headerlink" title="多个变量的声明与赋值"></a>多个变量的声明与赋值</h3><ul>
+<li>多个全局变量的声明可使用<code>var()</code>的方式简写</li>
+<li>不可以省略var，但可使用并行方式</li>
+<li>所有变量都可以使用类型推断</li>
+<li>局部变量不可以使用<code>var()</code>的方式简写，只能使用并行方式</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> (</span><br><span class="line">  <span class="comment">// 使用常规方式</span></span><br><span class="line">  str = <span class="string">"wally"</span></span><br><span class="line">  <span class="comment">// 使用并行方式以及类型推断</span></span><br><span class="line">  a, b = <span class="number">1</span>, <span class="literal">true</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多个变量的声明</span></span><br><span class="line"><span class="keyword">var</span> a, b, c, d <span class="keyword">int</span></span><br><span class="line"><span class="comment">// 多个变量的赋值</span></span><br><span class="line">a, b, c, d = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span></span><br><span class="line"><span class="comment">// 多个变量声明的同时赋值</span></span><br><span class="line"><span class="keyword">var</span> e, f, g <span class="keyword">int</span> = <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span></span><br><span class="line"><span class="comment">// 类型推断</span></span><br><span class="line"><span class="keyword">var</span> h, i, j = <span class="number">10</span>, <span class="number">9</span>, <span class="number">8</span></span><br><span class="line"><span class="comment">// 多个变量声明与赋值的最简写法</span></span><br><span class="line">l, m, n := <span class="number">17</span>, <span class="number">18</span>, <span class="number">19</span></span><br></pre></td></tr></table></figure>
+<h3 id="变量的类型转换"><a href="#变量的类型转换" class="headerlink" title="变量的类型转换"></a>变量的类型转换</h3><ul>
+<li>Go中不存在隐式转换，所有类型转换必须显式声明</li>
+<li>转换只能发生在两种相互兼容的类型之间</li>
+<li>类型转换的格式：<code>&lt;变量a&gt; [:]= &lt;变量a的类型&gt;(变量b)</code>，如果变量a之前声明过，不用写:，如果没声明过，需要添加:。</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在相互兼容的两种类型之间进行转换</span></span><br><span class="line"><span class="keyword">var</span> a <span class="keyword">float32</span> = <span class="number">1.2</span></span><br><span class="line">b := <span class="keyword">int</span>(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 以下表达式无法通过编译</span></span><br><span class="line"><span class="keyword">var</span> c boole = <span class="literal">true</span></span><br><span class="line">d := <span class="keyword">int</span>(c)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="wally wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫一扫,关注我！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>快到碗里来~~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wxpay.png" alt="wally 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.jpg" alt="wally 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Go语言基础/" rel="tag"># Go语言基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/24/02_Go语言基础知识/" rel="next" title="Go语言笔记（二）- 基础知识">
+                <i class="fa fa-chevron-left"></i> Go语言笔记（二）- 基础知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/13/JQM/" rel="prev" title="jQueryMobile">
+                jQueryMobile <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2145287" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -346,6 +594,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
 
         </div>
         
@@ -366,8 +620,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -385,7 +648,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -396,7 +659,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -407,7 +670,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -502,6 +765,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Go基本类型"><span class="nav-text"><a href="#&#x4E00;&#x3001;Go&#x57FA;&#x672C;&#x7C7B;&#x578B;" class="headerlink" title="&#x4E00;&#x3001;Go&#x57FA;&#x672C;&#x7C7B;&#x578B;"></a>&#x4E00;&#x3001;Go&#x57FA;&#x672C;&#x7C7B;&#x578B;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-布尔型：bool"><span class="nav-text"><a href="#1-&#x5E03;&#x5C14;&#x578B;&#xFF1A;bool" class="headerlink" title="1. &#x5E03;&#x5C14;&#x578B;&#xFF1A;bool"></a>1. &#x5E03;&#x5C14;&#x578B;&#xFF1A;bool</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-整型：init-uint"><span class="nav-text"><a href="#2-&#x6574;&#x578B;&#xFF1A;init-uint" class="headerlink" title="2. &#x6574;&#x578B;&#xFF1A;init/uint"></a>2. &#x6574;&#x578B;&#xFF1A;init/uint</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8位整型：int8-uint8"><span class="nav-text"><a href="#3-8&#x4F4D;&#x6574;&#x578B;&#xFF1A;int8-uint8" class="headerlink" title="3. 8&#x4F4D;&#x6574;&#x578B;&#xFF1A;int8/uint8"></a>3. 8&#x4F4D;&#x6574;&#x578B;&#xFF1A;int8/uint8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-字节型"><span class="nav-text"><a href="#4-&#x5B57;&#x8282;&#x578B;" class="headerlink" title="4. &#x5B57;&#x8282;&#x578B;"></a>4. &#x5B57;&#x8282;&#x578B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-16位整型：int16-uint16"><span class="nav-text"><a href="#5-16&#x4F4D;&#x6574;&#x578B;&#xFF1A;int16-uint16" class="headerlink" title="5. 16&#x4F4D;&#x6574;&#x578B;&#xFF1A;int16/uint16"></a>5. 16&#x4F4D;&#x6574;&#x578B;&#xFF1A;int16/uint16</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-32位整型-int32-rune-uint32"><span class="nav-text"><a href="#6-32&#x4F4D;&#x6574;&#x578B;-int32-rune-uint32" class="headerlink" title="6. 32&#x4F4D;&#x6574;&#x578B;: int32(rune)/uint32"></a>6. 32&#x4F4D;&#x6574;&#x578B;: int32(rune)/uint32</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-64位整型：int64-uint64"><span class="nav-text"><a href="#7-64&#x4F4D;&#x6574;&#x578B;&#xFF1A;int64-uint64" class="headerlink" title="7. 64&#x4F4D;&#x6574;&#x578B;&#xFF1A;int64/uint64"></a>7. 64&#x4F4D;&#x6574;&#x578B;&#xFF1A;int64/uint64</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-浮点型：float32-float64"><span class="nav-text"><a href="#8-&#x6D6E;&#x70B9;&#x578B;&#xFF1A;float32-float64" class="headerlink" title="8. &#x6D6E;&#x70B9;&#x578B;&#xFF1A;float32/float64"></a>8. &#x6D6E;&#x70B9;&#x578B;&#xFF1A;float32/float64</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-复数：complex64-complex128"><span class="nav-text"><a href="#9-&#x590D;&#x6570;&#xFF1A;complex64-complex128" class="headerlink" title="9. &#x590D;&#x6570;&#xFF1A;complex64/complex128"></a>9. &#x590D;&#x6570;&#xFF1A;complex64/complex128</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-足够保存指针的32位或64位整数型：uintptr"><span class="nav-text"><a href="#10-&#x8DB3;&#x591F;&#x4FDD;&#x5B58;&#x6307;&#x9488;&#x7684;32&#x4F4D;&#x6216;64&#x4F4D;&#x6574;&#x6570;&#x578B;&#xFF1A;uintptr" class="headerlink" title="10. &#x8DB3;&#x591F;&#x4FDD;&#x5B58;&#x6307;&#x9488;&#x7684;32&#x4F4D;&#x6216;64&#x4F4D;&#x6574;&#x6570;&#x578B;&#xFF1A;uintptr"></a>10. &#x8DB3;&#x591F;&#x4FDD;&#x5B58;&#x6307;&#x9488;&#x7684;32&#x4F4D;&#x6216;64&#x4F4D;&#x6574;&#x6570;&#x578B;&#xFF1A;uintptr</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-其他值类型："><span class="nav-text"><a href="#11-&#x5176;&#x4ED6;&#x503C;&#x7C7B;&#x578B;&#xFF1A;" class="headerlink" title="11. &#x5176;&#x4ED6;&#x503C;&#x7C7B;&#x578B;&#xFF1A;"></a>11. &#x5176;&#x4ED6;&#x503C;&#x7C7B;&#x578B;&#xFF1A;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-引用类型"><span class="nav-text"><a href="#12-&#x5F15;&#x7528;&#x7C7B;&#x578B;" class="headerlink" title="12. &#x5F15;&#x7528;&#x7C7B;&#x578B;"></a>12. &#x5F15;&#x7528;&#x7C7B;&#x578B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-接口类型：inteface"><span class="nav-text"><a href="#13-&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#xFF1A;inteface" class="headerlink" title="13. &#x63A5;&#x53E3;&#x7C7B;&#x578B;&#xFF1A;inteface"></a>13. &#x63A5;&#x53E3;&#x7C7B;&#x578B;&#xFF1A;inteface</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-函数类型：func"><span class="nav-text"><a href="#14-&#x51FD;&#x6570;&#x7C7B;&#x578B;&#xFF1A;func" class="headerlink" title="14. &#x51FD;&#x6570;&#x7C7B;&#x578B;&#xFF1A;func"></a>14. &#x51FD;&#x6570;&#x7C7B;&#x578B;&#xFF1A;func</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型零值"><span class="nav-text"><a href="#&#x7C7B;&#x578B;&#x96F6;&#x503C;" class="headerlink" title="&#x7C7B;&#x578B;&#x96F6;&#x503C;"></a>&#x7C7B;&#x578B;&#x96F6;&#x503C;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型别名"><span class="nav-text"><a href="#&#x7C7B;&#x578B;&#x522B;&#x540D;" class="headerlink" title="&#x7C7B;&#x578B;&#x522B;&#x540D;"></a>&#x7C7B;&#x578B;&#x522B;&#x540D;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单个变量的声明与赋值"><span class="nav-text"><a href="#&#x5355;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E0E;&#x8D4B;&#x503C;" class="headerlink" title="&#x5355;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E0E;&#x8D4B;&#x503C;"></a>&#x5355;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E0E;&#x8D4B;&#x503C;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个变量的声明与赋值"><span class="nav-text"><a href="#&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E0E;&#x8D4B;&#x503C;" class="headerlink" title="&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E0E;&#x8D4B;&#x503C;"></a>&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E0E;&#x8D4B;&#x503C;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的类型转换"><span class="nav-text"><a href="#&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;" class="headerlink" title="&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"></a>&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -668,6 +947,10 @@
   
     
 
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2145287"></script>
+      <!-- UY END -->
     
   
 
@@ -1136,26 +1419,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
